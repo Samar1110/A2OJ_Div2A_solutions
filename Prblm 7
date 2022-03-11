@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int i,j,h=0,e=0,l=0,o=0,a,b,c,d,f;
+    
+    char temp;
+	string s;
+	cin>>s;
+	    a=s.find('h');
+	    b=s.find('e',a);
+	    c=s.find('l',b);
+	    d=s.find('l',c+1);
+	    f=s.find('o',d);
+	   // cout<<a<<" "<<b<<" "<<c<<" "<<d<<" "<<f<<" \n";
+	    if(a<b&&b<c&&c<d&&d<f)
+	    {
+	        cout<<"YES"<<endl;
+	    }
+	    else
+	    {
+	        cout<<"NO"<<endl;
+	    }
+	return 0;
+}
