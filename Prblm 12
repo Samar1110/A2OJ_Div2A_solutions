@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int n,m;
+    cin>>n>>m;
+    if(n%2==0&&m%2==0)
+    {
+        cout<<"Malvika";
+        exit(0);
+    }
+    else if(n%2==1&&m%2==1)
+    {
+        cout<<"Akshat";
+        exit(0);
+    }
+    else if((n+m)%4==3)
+    {
+        cout<<"Akshat";
+        exit(0);
+    }
+    else if((n+m)%4==1);
+    {
+        cout<<"Malvika";
+        exit(0);
+    }
+    
+
+    return 0;
+}
