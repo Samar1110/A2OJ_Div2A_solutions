@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    string s;
+    cin>>s;
+    long long int i;
+    for(i=0;i<s.length();i++)
+    {
+        if(s[i]=='W'&&s[i+1]=='U'&&s[i+2]=='B')
+        {
+            if(i==0)
+            {
+                s.erase(i,3);
+                i=-1;
+            }
+            else{
+                s[i]=' ';
+                s.erase(i+1,2);
+            }
+        }
+    }
+    cout<<s;
+
+    return 0;
+}
