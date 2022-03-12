@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int i,j,count=0,n,h,a;
+    cin>>n;
+    long long int arr[n],bar[n];
+    for(i=0;i<n;i++)
+    {
+        cin>>h>>a;
+        arr[i]=h;
+        bar[i]=a;
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[i]==bar[j])
+            {
+                count++;
+            }
+            if(bar[i]==arr[j])
+            {
+                count++;
+            }
+        }
+    }
+    cout<<count;
+
+    return 0;
+}
