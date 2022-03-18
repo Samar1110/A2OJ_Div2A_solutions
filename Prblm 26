@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int n,i,count1=0,count2=0,count3=0,min,x;
+    cin>>n;
+    long long int arr[n];
+    vector <int> v1,v2,v3;
+    for(i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        if(arr[i]==1)
+        {
+            count1++;
+            v1.push_back(i+1);
+        }
+        if(arr[i]==2)
+        {
+            count2++;
+            v2.push_back(i+1);
+        }
+        if(arr[i]==3)
+        {
+            count3++;
+            v3.push_back(i+1);
+        }
+    }
+    x=count1<count2?count1:count2;
+    min=x<count3?x:count3;
+    cout<<min<<endl;
+    for(i=0;i<min;i++)
+    {
+        cout<<v1[i]<<" "<<v2[i]<<" "<<v3[i]<<endl;
+    }
+    
+    return 0;
+}
