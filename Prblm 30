@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int n,a,i,k,count=0;
+    cin>>n>>k;
+    vector <int> v;
+    for(i=0;i<n;i++)
+    {
+        cin>>a;
+        v.push_back(a+k);
+        if(v[i]<=5)
+        {
+            count++;
+        }
+    }
+    cout<<count/3;
+    return 0;
+}
