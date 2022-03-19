@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int n,v,i,j,a,b,count=0;
+    cin>>n>>v;
+    vector <int> v2;
+    for(i=0;i<n;i++)
+    {
+        vector <int> v1;
+        cin>>a;
+        for(j=0;j<a;j++)
+        {
+            cin>>b;
+            v1.push_back(b);
+        }
+        sort(v1.begin(),v1.end());
+        if(v>v1[0])
+        {
+            count++;
+            v2.push_back(i+1);
+        }
+    }
+    cout<<count<<endl;
+    for(i=0;i<v2.size();i++)
+    {
+        cout<<v2[i]<<" ";
+    }
+    return 0;
+}
