@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int n,k,f,t,i;
+    cin>>n>>k;
+    long long int arr[n];
+    for(i=0;i<n;i++)
+    {
+        cin>>f>>t;
+        if(t>k)
+        {
+            arr[i]=f-(t-k);
+        }
+        else
+        {
+            arr[i]=f;
+        }
+    }
+    sort(arr,arr+n);
+    cout<<arr[n-1];
+    
+
+    return 0;
+}
