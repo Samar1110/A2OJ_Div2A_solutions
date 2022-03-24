@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long int ll;
+
+int main()
+{
+    ll n,c,i,j,max=0;
+    cin>>n>>c;
+    ll arr[n];
+    for(i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        if(i>0)
+        {
+            j=arr[i-1]-arr[i]-c;
+            if(max<j)
+            {
+               max=j;
+            }
+        }
+        
+    }
+    cout<<max;
+
+    return 0;
+}
