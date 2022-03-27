@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int i,j,n, k, l, c, d,p,nl,np,min,a,b,e;
+    cin>>n>>k>>l>>c>>d>>p>>nl>>np;
+    a=k*l/nl;
+    b=c*d;
+    e=p/np;
+    long long int arr[]={a,b,e};
+    sort(arr,arr+3);
+    cout<<arr[0]/n;
+    
+
+    return 0;
+}
