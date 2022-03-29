@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+typedef long long int ll;
+ll func(ll p,ll t)
+{
+    ll form1,form2;
+    form1=3*p/10;
+    form2=p-(p/250)*t;
+    if(form1>form2)
+    {
+        return form1;
+    }
+    else
+    {
+        return form2;
+    }
+}
+
+int main()
+{
+    ll a,b,c,d,max1,max2;
+    cin>>a>>b>>c>>d;
+    max1=func(a,c);
+    max2=func(b,d);
+    if(max1>max2)
+    {
+        cout<<"Misha"<<endl;
+    }
+    else if(max1<max2)
+    {
+        cout<<"Vasya"<<endl;
+    }
+    else
+    {
+        cout<<"Tie"<<endl;
+    }
+    
+
+    return 0;
+}
