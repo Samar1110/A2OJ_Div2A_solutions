@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef long long int ll;
+#define pb push_back
+#define f first
+#define s second
+int main()
+{
+    ll n;
+    cin>>n;
+    vector <pair<int,int>> v;
+    for(ll i=0;i<n;i++)
+    {
+        ll a,b;
+        cin>>a>>b;
+        v.pb( make_pair(a,b) );
+    }
+    ll sum=0;
+    for(ll i=0;i<n;i++)
+    {
+        ll count1=0,count2=0,count3=0,count4=0;
+        for(ll j=0;j<n;j++)
+        {
+            if(v[i].f<v[j].f&&v[i].s==v[j].s)
+            {
+                count1++;
+            }
+            if(v[i].f>v[j].f&&v[i].s==v[j].s)
+            {
+                count2++;
+            }
+            if(v[i].f==v[j].f&&v[i].s<v[j].s)
+            {
+                count3++;
+            }
+            if(v[i].f==v[j].f&&v[i].s>v[j].s)
+            {
+                count4++;
+            }
+        }
+        if(count1>0&&count2>0&&count3>0&&count4>0)
+        {
+            sum++;
+        }
+        
+    }
+    cout<<sum;
+    
+    
+    return 0;
+}
